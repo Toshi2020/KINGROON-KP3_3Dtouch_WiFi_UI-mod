@@ -34,7 +34,7 @@ https://marlinfw.org/meta/download/
 ・制御線側の3ピンをrobin miniの空きコネクタに、センサ出力側の2ピンを空いているZ+コネクタに接続します。マザーボード側のコネクタはいずれも3ピンのうち中央がGNDなので注意が必要です。またGNDを挟んで信号線と反対側のピンは電源ラインなので、センサ出力線を間違ってそちらに接続すると3Dtouchが破損すると思うので注意が必要です。  
 ・元々製品に付属していたケーブルが少しだけ短いこともあり、私は3ピンのXHコネクタを使って延長ケーブルを作りました。延長ケーブルの先端は絶縁被覆を1cmほど剥いて心線をねじってから半田メッキして3Dtouch側のコネクタに挿入してテープで止めました。  
 ・従来Z軸のホーミング(原点出し)に使っていたマイクロスイッチはZ-コネクタと接続したままです。3Dtouchが不調になってもファームを焼き直せば従来の方式に戻すことがでるというわけです。  
-![3DtouchConnect1](https://github.com/Toshi2020/KINGROON-KP3_3Dtouch_WiFi_UI-mod/assets/81674805/f269cf97-2c70-4059-b99f-814745f2c529)
+![3DtouchConnect1](https://github.com/Toshi2020/KINGROON-KP3_3Dtouch_WiFi_UI-mod/assets/81674805/736eea89-f902-462e-9a8e-69849f45f71a)
 ![3DtouchConnect2](https://github.com/Toshi2020/KINGROON-KP3_3Dtouch_WiFi_UI-mod/assets/81674805/13cce614-3bf8-461a-a4b6-2ceebded5c2a)
 
 **●注意すべき点**  
