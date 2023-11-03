@@ -1,6 +1,9 @@
-#KINGROON-KP3_3Dtouch_WiFi_UI-mod  
-#KINGROON KP3に3DtouchとWiFi機能を追加しUIも少し変更  
-  
+# KINGROON-KP3_3Dtouch_WiFi_UI-mod  
+# KINGROON KP3に3DtouchとWiFi機能を追加しUIも少し変更  
+
+![KP3_Overall](https://github.com/Toshi2020/KINGROON-KP3_3Dtouch_WiFi_UI-mod/assets/81674805/ce16ab88-0baf-4877-b0b3-2e19cd6d3db5)
+![ScreenShot2](https://github.com/Toshi2020/KINGROON-KP3_3Dtouch_WiFi_UI-mod/assets/81674805/3c9dfac3-55e2-4d86-8dbd-595dad7ee802)
+
 **●概要**  
 ・KINGROON KP3に3Dtouchによる自動レベリング機能を追加しました。  
 ・WiFi機能の追加も行いました。KP3に挿してあるSDカードにCuraからWiFiでファイルを転送して印刷の自動開始を行うことができます。  
@@ -31,9 +34,9 @@ https://marlinfw.org/meta/download/
 ・制御線側の3ピンをrobin miniの空きコネクタに、センサ出力側の2ピンを空いているZ+コネクタに接続します。マザーボード側のコネクタはいずれも3ピンのうち中央がGNDなので注意が必要です。またGNDを挟んで信号線と反対側のピンは電源ラインなので、センサ出力線を間違ってそちらに接続すると3Dtouchが破損すると思うので注意が必要です。  
 ・元々製品に付属していたケーブルが少しだけ短いこともあり、私は3ピンのXHコネクタを使って延長ケーブルを作りました。延長ケーブルの先端は絶縁被覆を1cmほど剥いて心線をねじってから半田メッキして3Dtouch側のコネクタに挿入してテープで止めました。  
 ・従来Z軸のホーミング(原点出し)に使っていたマイクロスイッチはZ-コネクタと接続したままです。3Dtouchが不調になってもファームを焼き直せば従来の方式に戻すことがでるというわけです。  
-[3DtouchConnect1.jpg]  
-[3DtouchConnect2.jpg]  
-  
+![3DtouchConnect1](https://github.com/Toshi2020/KINGROON-KP3_3Dtouch_WiFi_UI-mod/assets/81674805/f269cf97-2c70-4059-b99f-814745f2c529)
+![3DtouchConnect2](https://github.com/Toshi2020/KINGROON-KP3_3Dtouch_WiFi_UI-mod/assets/81674805/13cce614-3bf8-461a-a4b6-2ceebded5c2a)
+
 **●注意すべき点**  
 ・出荷時期によるのかと思いますが私のKP3はステッピングモーターの配線が逆になっているのでそれ用のConfiguration.hの設定となっています。よってフラッシュした後いきなりホーミングをせずに、XYを少し動かしてみて方向を確認し、逆に動くようであればConfiguration.hの3412行から8行分をコメントアウトしてください。Configファイルの変更点はファイルの末尾にまとめてあります。  
 ・3Dtouchの3ピンプラグの信号はマザーボード側とピンの並びが違うので、絶対に直結しないように！3Dtouchかマザーボードのどちらかが焼損すると思われます。通電前にしっかり確認してください。2ピン側も然りです。  
@@ -46,7 +49,7 @@ https://marlinfw.org/meta/download/
 ・変更したファイルの動作については無保証です。特にWiFi関連は十分な検証ができていません。WiFiを組み込まない場合はConfiguration.hの#define ROBIN_WIFIの行をコメントアウトたほうがいいかもしれません。WiFiモジュールを挿さずにWiFiありのビルドをフラッシュしてもSSIDが"TP-LINK_MKS"、IPアドレスが"192.168.3.100"と表示されるだけかとは思いますが。  
   
 ・Marlinは初回を除きプログラムをフラッシュしてもEEPROMの内容は変化しません(フラッシュの度に初期化する設定にもできますが今回はデフォルトのままです)。よってDEFAULT_で始まるパラメータを変更してビルドしてフラッシュしたら、Configuration/Advanced Settings/initialize EEPROMを実行するか、まずConfiguration/Restore Defaultsを実行し、続いて/Store Settingsを実行しないとEEPROMに反映されないと思います。  
-  
+
 **●使い方**  
 ・3Dtouchのキャリブレーションのやり方ですが、Motion/Z Probe Wizardでウイザードが起動します。これを実行するとZ軸のホーミングの後でノズルが中央に移動するので、ノズルとベッドの隙間を紙一枚(0.15mm)程度に調整してDoneで抜けます。その後Configuration/Store Settingsを忘れずに。ノズルを交換しない限り一度やればOKかと思っています。値をメモしておけばEEPROMをイニシャライズした場合にConfiguration/Probe Z Offsetで値を直接設定できます。  
 ・自動レベリングに関しては、Motion/Bed Levelingで行った後Configuration/Store Settingsでセーブする必要があります。ベッドの種類を交換するたびに行う必要があり頻度がそれなりに高いと思われるので、メニューのCustom Commandsの下にこの2つを続けて行うコマンドを用意しました。(私はPLA専用とPETG&TPU用のマットを使い分けています)  
