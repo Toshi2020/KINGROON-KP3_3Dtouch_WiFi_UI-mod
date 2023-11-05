@@ -1,4 +1,4 @@
-# KINGROON-KP3+3Dtouch+WiFi+UI-mod  
+# KINGROON KP3+3Dtouch+WiFi+UI mod  
 # KINGROON KP3に3DtouchとWiFi機能を追加しUIも少し変更  
 
 ![KP3_Overall](https://github.com/Toshi2020/KINGROON-KP3_3Dtouch_WiFi_UI-mod/assets/81674805/ce16ab88-0baf-4877-b0b3-2e19cd6d3db5)
