@@ -17,7 +17,7 @@
 ・3Dtouch取り付け部の3Dプリントデータなどはこちらにアップしました↓。  
 https://www.thingiverse.com/thing:6295855  
 ・関連する話題をブログにアップしました。  
-https://minkara.carview.co.jp/userid/3336538/blog/  
+https://minkara.carview.co.jp/userid/3336538/blog/47323023/  
 
 ・参考までにrobin mini対応のMKS版のファームウェアはこちらのmks firmwareディレクトリ、回路図等はhardwareディレクトリ以下にあります↓  
 https://github.com/makerbase-mks/MKS-Robin-mini  
