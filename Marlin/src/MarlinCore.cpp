@@ -1631,6 +1631,9 @@ void setup() {
   #endif
 
   #ifdef ROBIN_WIFI	/// KP3追加
+    #if ENABLED(SDSUPPORT)
+      if (!card.isMounted()) SETUP_RUN(card.mount());
+    #endif
     SETUP_RUN(mks_wifi_init());	/// WiFiモジュールのイニシャライズ
   #endif
 
