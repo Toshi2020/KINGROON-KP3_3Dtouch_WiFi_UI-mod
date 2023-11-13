@@ -85,7 +85,7 @@ https://marlinfw.org/meta/download/
 ・gcode.cppとgcode.hのエンコードをUTF-8に変更してセーブしなおしました(中華文字が入っているので)。  
 ・MksWifi.inoの1684と1689行あたりの4500000と1958400の行のコメントアウトを入れ替えました(2か所)  
 ・ビルドはArduinoIDE 2.2.1を利用し、GitHubの説明の通りにビルドしMksWifi.binを作成しました。  
-・MArlin側ではwifiSerial.hのWIFI_UPLOAD_BAUDRATEを1958400から4500000に変更してビルドしました。  
+・Marlin側ではwifiSerial.hのWIFI_UPLOAD_BAUDRATEを1958400から4500000に変更してビルドしました。  
 ・以上の変更により、3DBenchyの転送時間は44秒から29秒に短縮されました。  
 ・MKSとしては想定外の設定なのかもしれませんが、しばらくはこれで使ってみようと思っています。  
 
